@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block body %}
+        <h2>Customers</h2>
+        {% if not customers %}
+        <p>There are currently no customers</p>
+        {% else %}
+        {% for cust in customers %}
+        {{ cust.__str__() }}  | <a href="{{ url_for('get_cust_by_id', id=cust.cust_id) }}">page</a><br>
+        {% endfor %}
+        {% endif %}
+{% endblock body %}

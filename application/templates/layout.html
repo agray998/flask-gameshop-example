@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <title>Gameshop</title>
+        <meta author>Adam Gray<meta>
+    </head>
+    <body style="background-color:lightblue; font-family:calibri;">
+        <h1>Gameshop</h1>
+        <a href="{{ url_for('index') }}">Home</a> | <a href="{{ url_for('view_customers') }}">View all customers</a>
+        {% block body %}
+        {% endblock body %}
+    </body>
+</html>
